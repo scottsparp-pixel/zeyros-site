@@ -8,127 +8,133 @@
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Vazirmatn', sans-serif;
-    background: #fff;
-    color: #111;
+
+body{
+margin:0;
+font-family:'Vazirmatn',sans-serif;
+background:#fff;
+color:#111;
 }
 
 /* هدر */
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    border-bottom: 1px solid #eee;
+header{
+display:flex;
+justify-content:space-between;
+padding:20px 40px;
+position:fixed;
+width:100%;
+background:white;
+z-index:1000;
+border-bottom:1px solid #eee;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.menu {
-    cursor: pointer;
+.logo{
+font-size:22px;
+font-weight:bold;
+letter-spacing:2px;
 }
 
 /* هیرو */
-.hero {
-    height: 90vh;
-    background: url('https://images.unsplash.com/photo-1521334884684-d80222895322') center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
-.hero h1 {
-    font-size: 50px;
-    background: rgba(0,0,0,0.4);
-    padding: 20px;
+.hero h1{
+color:white;
+font-size:48px;
+background:rgba(0,0,0,0.4);
+padding:20px;
 }
 
 /* دسته بندی */
-.categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    gap: 20px;
-    padding: 50px;
+.categories{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:80px 20px 40px;
+margin-top:60px;
+flex-wrap:wrap;
 }
 
-.cat {
-    height: 200px;
-    background: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    transition: 0.3s;
-    cursor: pointer;
+.cat{
+padding:30px 40px;
+border:1px solid #ddd;
+cursor:pointer;
+transition:0.3s;
 }
 
-.cat:hover {
-    transform: translateY(-10px);
-    background: #000;
-    color: #fff;
+.cat:hover{
+background:black;
+color:white;
+transform:translateY(-5px);
 }
 
 /* محصولات */
-.products {
-    padding: 50px;
-    text-align: center;
+.products{
+padding:50px;
+text-align:center;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 30px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
-.card {
-    border: 1px solid #eee;
-    padding: 10px;
-    transition: 0.3s;
+.card{
+overflow:hidden;
+border:1px solid #eee;
+padding-bottom:15px;
 }
 
-.card img {
-    width: 100%;
+.card img{
+width:100%;
+height:350px;
+object-fit:cover;
+transition:0.4s;
 }
 
-.card:hover {
-    transform: scale(1.03);
+.card:hover img{
+transform:scale(1.1);
+}
+
+.card p{
+margin:15px 0;
+}
+
+.btn{
+background:black;
+color:white;
+padding:10px 20px;
+border:none;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#444;
 }
 
 /* فوتر */
-footer {
-    padding: 40px;
-    background: #111;
-    color: white;
-    text-align: center;
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:40px;
+margin-top:50px;
 }
 
-.btn {
-    padding: 10px 20px;
-    border: none;
-    background: black;
-    color: white;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background: #444;
-}
 </style>
-
 </head>
 
 <body>
 
 <header>
 <div class="logo">ZEYROS</div>
-<div class="menu">☰</div>
+<div>☰</div>
 </header>
 
 <section class="hero">
@@ -148,19 +154,19 @@ footer {
 <div class="grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80">
 <p>لباس طراحی خاص</p>
 <button class="btn">خرید</button>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1495121605193-b116b5b09a27">
+<img src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=800&q=80">
 <p>استایل لوکس</p>
 <button class="btn">خرید</button>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
+<img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=80">
 <p>طراحی اختصاصی</p>
 <button class="btn">خرید</button>
 </div>
@@ -171,7 +177,7 @@ footer {
 <footer>
 <p>Instagram: zeyros_design</p>
 <p>📞 +989117745093</p>
-<p>پرداخت کارت: 1234 5678 9876 5432</p>
+<p>💳 کارت: 1234 5678 9876 5432</p>
 </footer>
 
 </body>
