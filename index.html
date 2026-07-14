@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZEYROS | زینب رستمی</title>
+
+<style>
+body{
+  margin:0;
+  font-family:tahoma;
+  background:#000;
+  color:#fff;
+}
+
+/* هدر */
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:#000;
+  border-bottom:1px solid #333;
+}
+
+.logo{
+  color:gold;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.menu{
+  font-size:25px;
+  cursor:pointer;
+}
+
+/* منو */
+.sidebar{
+  position:fixed;
+  right:-250px;
+  top:0;
+  width:250px;
+  height:100%;
+  background:#111;
+  padding:20px;
+  transition:0.4s;
+}
+
+.sidebar a{
+  display:block;
+  margin:15px 0;
+  color:white;
+  text-decoration:none;
+}
+
+/* هیرو */
+.hero{
+  height:90vh;
+  background:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d') center/cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:40px;
+  background:rgba(0,0,0,0.5);
+  padding:20px;
+}
+
+/* دسته بندی */
+.categories{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  padding:40px;
+}
+
+.box{
+  width:150px;
+  height:150px;
+  background:#111;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:10px;
+  transition:0.3s;
+  cursor:pointer;
+}
+
+.box:hover{
+  transform:translateY(-10px);
+  background:gold;
+  color:black;
+}
+
+/* درباره */
+.about{
+  text-align:center;
+  padding:50px;
+}
+
+/* محصولات */
+.products{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:40px;
+}
+
+.product{
+  width:200px;
+  background:#111;
+  padding:10px;
+  border-radius:10px;
+}
+
+.product img{
+  width:100%;
+}
+
+/* اینستاگرام */
+.insta{
+  text-align:center;
+  padding:30px;
+}
+
+/* ویژگی */
+.features{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.feature{
+  background:#111;
+  padding:15px;
+  border-radius:10px;
+}
+
+/* فوتر */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#000;
+  border-top:1px solid #333;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="logo">ZEYROS</div>
+  <div class="menu" onclick="toggleMenu()">☰</div>
+</header>
+
+<div class="sidebar" id="menu">
+  <a href="#">فارسی / English</a>
+  <a href="#">ورود</a>
+  <a href="#">پرسش و پاسخ</a>
+  <a href="#">تماس با ما</a>
+</div>
+
+<section class="hero">
+  <h1>طراحی هویت، نه فقط لباس</h1>
+</section>
+
+<section class="categories">
+  <div class="box">مانتو</div>
+  <div class="box">کت شلوار</div>
+  <div class="box">شومیز</div>
+  <div class="box">پالتو</div>
+</section>
+
+<section class="about">
+  <h2>ZEYROS</h2>
+  <p>برند طراحی لباس زینب رستمی با تمرکز بر طراحی خاص و منحصر به فرد</p>
+</section>
+
+<section class="products">
+  <div class="product">
+    <img src="https://via.placeholder.com/200">
+    <p>لباس خاص</p>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200">
+    <p>طراحی لوکس</p>
+  </div>
+</section>
+
+<section class="insta">
+  <p>📸 Instagram: zeyros_design</p>
+</section>
+
+<section class="features">
+  <div class="feature">انتخابی هوشمندانه</div>
+  <div class="feature">ارسال فوری</div>
+  <div class="feature">باشگاه مشتریان</div>
+  <div class="feature">پرداخت آنلاین</div>
+</section>
+
+<section style="text-align:center; padding:20px;">
+  <p>💳 کارت: 1234 5678 9876 5432</p>
+  <p>📞 +989117745093</p>
+</section>
+
+<footer>
+  <p>© ZEYROS</p>
+</footer>
+
+<script>
+function toggleMenu(){
+  let m = document.getElementById("menu");
+  m.style.right = (m.style.right === "0px") ? "-250px" : "0px";
+}
+</script>
+
+</body>
+</html>
